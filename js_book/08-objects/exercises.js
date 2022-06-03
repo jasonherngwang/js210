@@ -113,22 +113,22 @@ console.log(newObj3); // => { bar: 2 }
 filterObject = (obj, callback) => {
   filtered = Object.keys(obj)
     .filter((key) => callback(obj[key]))
-    .reduce((result, key) => (result[key] = obj[key], result), {});
+    .reduce((result, key) => ((result[key] = obj[key]), result), {});
   return filtered;
 };
-console.log(filterObject(objToCopy, e => e >= 2));
+console.log(filterObject(objToCopy, (e) => e >= 2));
 
 // Ex 9
 let foo = {
-  a: 'hello',
-  b: 'world',
+  a: "hello",
+  b: "world",
 };
 
-let qux = 'hello';
+let qux = "hello";
 
 function bar(argument1, argument2) {
-  argument1.a = 'hi';
-  argument2 = 'hi';
+  argument1.a = "hi";
+  argument2 = "hi";
 }
 
 bar(foo, qux);
@@ -148,13 +148,13 @@ array ["a", ["b", false]]
 array ["b", false]
 object {}
 */
-[1, 2, ["a", ["b", false]], null, {}]
+[1, 2, ["a", ["b", false]], null, {}];
 
-// Ex 6
+// Ex 11
 let obj6 = {
   foo: { a: "hello", b: "world" },
   bar: ["example", "mem", null, { xyz: 6 }, 88],
-  qux: [4, 8, 12]
+  qux: [4, 8, 12],
 };
 
 obj6.bar[3].xyz = 606;
