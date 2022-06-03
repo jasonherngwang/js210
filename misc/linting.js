@@ -1,1 +1,0 @@
-var badvariable = 1
