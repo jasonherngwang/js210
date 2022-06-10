@@ -10,8 +10,8 @@ Algo
 function isPrime(num) {
   if (num <= 1 || (num > 2 && num % 2 === 0)) return false;
 
-  stop = Math.floor(Math.sqrt(num));
-  for (currentNum = 3; currentNum <= stop; currentNum += 2) {
+  const stop = Math.floor(Math.sqrt(num));
+  for (let currentNum = 3; currentNum <= stop; currentNum += 2) {
     if (num % currentNum === 0) return false;
   }
   return true;
