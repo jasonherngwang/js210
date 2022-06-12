@@ -36,7 +36,7 @@ const multiplesOf = (...nums) => {
 multiplesOf(3, 5, 10);
 multiplesOf(2, 6, 7);
 
-// Further Exploration (corrent)
+// Further Exploration (correct)
 function multiplesOfThreeAndFiveRange(min, max) {
   for (let num = min; num <= max; num += 1) {
     if (num % 3 === 0 && num % 5 === 0) {
