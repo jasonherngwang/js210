@@ -31,10 +31,10 @@ A: 65
 Z: 90
 */
 
-const LOWER_A = 97;
-const LOWER_Z = 122;
-const UPPER_A = 65;
-const UPPER_Z = 90;
+const LOWERCASE_A = 97;
+const LOWERCASE_Z = 122;
+const UPPERCASE_A = 65;
+const UPPERCASE_Z = 90;
 const ALPHABET_SIZE = 26;
 
 function rotLetter(letter, places) {
@@ -42,8 +42,8 @@ function rotLetter(letter, places) {
   let codeA;
   let codeZ;
   [codeA, codeZ] = /[a-z]/.test(letter)
-    ? [LOWER_A, LOWER_Z]
-    : [UPPER_A, UPPER_Z];
+    ? [LOWERCASE_A, LOWERCASE_Z]
+    : [UPPERCASE_A, UPPERCASE_Z];
   // Normalization. `places` can be a large positive or negative number.
   while (code > codeZ) code -= ALPHABET_SIZE;
   while (code < codeA) code += ALPHABET_SIZE;
