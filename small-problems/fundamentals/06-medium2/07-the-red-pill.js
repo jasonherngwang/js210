@@ -9,7 +9,7 @@ function one() {
       result += String.fromCharCode(args[i]); // ASCII code integer => single character
     }
 
-    log(result);
+    log(result); // Variable `log` referencing function `log` is in the closure of function `anotherOne`.
   }
 
   function anotherAnotherOne() {
