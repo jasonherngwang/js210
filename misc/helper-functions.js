@@ -25,11 +25,41 @@ function tally(array) {
   }, {});
 }
 
+function tally2(array) {
+  let counts = {};
+  for (let elem of array) {
+    if (counts[elem]) {
+      counts[elem] += 1;
+    } else {
+      counts[elem] = 1;
+    }
+  }
+  return counts;
+}
+
+function tally3(array) {
+  let counts = {};
+  for (let elem of array) {
+    counts[elem] = (counts[elem] || 0) + 1;
+  }
+  return counts;
+}
+
 // console.log(tally([1, 1, 2, undefined, null, '', '', 0]))
 
 
 // Sorting numbers
 console.log([1, 5, 3].sort((a, b) => a - b));
+
+
+// STRINGS
+
+// Find left-of-center index
+function centerOf(string) {
+  let midIndex = Math.ceil(string.length / 2) - 1;
+  if (string.length % 2 === 0) return string.slice(midIndex, midIndex + 2);
+  return string[midIndex];
+}
 
 
 // REGEX AND CHARACTER CHECKING
@@ -38,6 +68,15 @@ console.log([1, 5, 3].sort((a, b) => a - b));
 function isLowercaseLetter(char) { return char >= 'a' && char <= 'z' }
 function isUppercaseLetter(char) { return char >= 'A' && char <= 'Z' }
 function isDigit(char) { return char >= '0' && char <= '9' }
+
+// Pass capture group to a replacer function
+function reverseWord(word) {
+  return [...word].reverse().join('');
+}
+
+function reverseWordsRegex(sentence) {
+  return sentence.replace(/\b(\w){5,}\b/g, reverseWord); // match is passed to reverseWord
+}
 
 
 // MATH AND NUMBERS
@@ -59,3 +98,17 @@ function normalize(input, min, max) {
 
 // Max or min of array
 console.log(Math.max([1, 2, 3]));
+
+
+// RANGES
+
+
+// Numbers [ 0, 1, 2, 3, 4 ]
+[...Array(5).keys()];
+Array.from(Array(5).keys())
+Array.from({length: 5}, (_, i) => i);
+Array(5).fill(1).map((x, y) => x + y)
+// Letters
+range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
+Array.from(Array(26)).map((e, i) => i + 65).map((x) => String.fromCharCode(x)); // Upper
+Array.from(Array(26)).map((e, i) => i + 97).map((x) => String.fromCharCode(x)); // Lower
