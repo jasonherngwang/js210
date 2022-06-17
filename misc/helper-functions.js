@@ -28,6 +28,10 @@ function tally(array) {
 // console.log(tally([1, 1, 2, undefined, null, '', '', 0]))
 
 
+// Sorting numbers
+console.log([1, 5, 3].sort((a, b) => a - b));
+
+
 // REGEX AND CHARACTER CHECKING
 
 // Check character class
@@ -51,3 +55,7 @@ function normalize(input, min, max) {
 // console.log(normalize(0, 0, 360));
 // console.log(normalize(7777, 0, 360));
 // console.log(normalize(7, 0, 360));
+
+
+// Max or min of array
+console.log(Math.max([1, 2, 3]));
