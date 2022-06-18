@@ -3,15 +3,17 @@ Write a function that takes a string argument containing one or more words and r
 */
 
 function reverseWord(word) {
-  return [...word].reverse().join('');
+  return [...word].reverse().join("");
 }
 
 function reverseWords(sentence) {
-  let words = sentence.split(' ');
-  return words.map(word => {
-    if (word.length < 5) return word;
-    return reverseWord(word);
-  }).join(' ');
+  let words = sentence.split(" ");
+  return words
+    .map((word) => {
+      if (word.length < 5) return word;
+      return reverseWord(word);
+    })
+    .join(" ");
 }
 
 // console.log(reverseWords('Professional'));             // "lanoisseforP"
@@ -22,6 +24,6 @@ function reverseWordsRegex(sentence) {
   return sentence.replace(/\b(\w){5,}\b/g, reverseWord);
 }
 
-console.log(reverseWordsRegex('Professional'));             // "lanoisseforP"
-console.log(reverseWordsRegex('Walk around the block'));    // "Walk dnuora the kcolb"
-console.log(reverseWordsRegex('Launch School'));            // "hcnuaL loohcS"
+console.log(reverseWordsRegex("Professional")); // "lanoisseforP"
+console.log(reverseWordsRegex("Walk around the block")); // "Walk dnuora the kcolb"
+console.log(reverseWordsRegex("Launch School")); // "hcnuaL loohcS"
