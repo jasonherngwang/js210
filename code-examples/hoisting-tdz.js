@@ -1,5 +1,5 @@
 // Not recommended, but allowed since `tmp` is not declared in this outer scope
-tmp = "abc";
+// tmp = "abc";
 
 if (true) {
   // Entering scope of `tmp`; TDZ starts
