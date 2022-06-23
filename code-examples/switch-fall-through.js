@@ -23,4 +23,5 @@ switch (a) {
     break;
   default:
     console.log("a is neither 5, nor 6");
+    break;
 }

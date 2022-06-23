@@ -12,5 +12,5 @@ function average(arr) {
 }
 console.log(average([1, 5, 10]));
 
-const temperature = [60, 65, 70, 80, 100];
-console.log(average(temperature));
+const temperatures = [60, 65, 70, 80, 100];
+console.log(average(temperatures));
