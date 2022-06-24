@@ -8,6 +8,10 @@ function concat(array1, secondArgument) {
   return result;
 }
 
+// function concat(array, arg) {
+//   return [...array, ...(Array.isArray(arg) ? arg : [arg])];
+// }
+
 concat([1, 2, 3], [4, 5, 6]); // [1, 2, 3, 4, 5, 6]
 concat([1, 2], 3); // [1, 2, 3]
 concat([2, 3], ["two", "three"]); // [2, 3, "two", "three"]

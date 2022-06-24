@@ -1,3 +1,12 @@
+/* 
+Comparing Arrays
+- If different lengths return false
+- Iterate through indices of first array
+  - Compare elements at index, from both arrays. Use ===
+    - If not equal, return false from the function
+- Return true
+*/
+
 function arraysEqual(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   for (let index = 0; index < arr1.length; index += 1) {

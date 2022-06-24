@@ -11,15 +11,15 @@ Algo
     - Reassign `number` to this value, for use in future iterations.
 - Join array elements
 */
-const DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+const DIGITS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 function integerToString(num) {
-  if (num === 0) return '0';
-  let result = '';
+  if (num === 0) return "0";
+  let result = "";
   let workingNum = num;
   while (workingNum > 0) {
     let remainder = workingNum % 10;
-    result = DIGITS[remainder] + result;
+    result = DIGITS[remainder] + result; // Build rightmost-to-leftmost digit
     workingNum = Math.floor(workingNum / 10);
   }
   return result;

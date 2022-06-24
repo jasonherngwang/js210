@@ -107,7 +107,10 @@ Array.from(Array(5).keys());
 Array.from({ length: 5 }, (_, i) => i);
 Array(5)
   .fill(1)
-  .map((x, y) => x + y);
+  .map((elem, index) => elem + index);
+Array(15 - 10)
+  .fill(10)
+  .map((x, y) => x + y); // [ 10, 11, 12, 13, 14 ]
 // Letters
 range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
   String.fromCharCode(x)

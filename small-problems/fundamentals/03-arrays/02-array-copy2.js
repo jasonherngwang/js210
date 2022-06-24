@@ -7,7 +7,10 @@ let myArray = [1, 2, 3, 4];
 //   myOtherArray.push(myArray[index]);
 // }
 // Method 2: Using Array.prototype.slice to make a shallow copy
-const myOtherArray = myArray.slice();
+// const myOtherArray = myArray.slice();
+
+// Method 3: Spread Operator
+const myOtherArray = [...myArray];
 
 myArray.pop();
 console.log(myOtherArray);

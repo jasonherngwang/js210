@@ -31,3 +31,16 @@ console.log(missing([-3, -2, 1, 5])); // [-1, 0, 2, 3, 4]
 console.log(missing([1, 2, 3, 4])); // []
 console.log(missing([1, 5])); // [2, 3, 4]
 console.log(missing([6])); // []
+
+function missing2(arr) {
+  if (arr.length <= 1) return [];
+  return Array(arr[arr.length - 1] - arr[0] - 1)
+    .fill(arr[0] + 1)
+    .map((x, y) => x + y)
+    .filter((x) => !arr.includes(x));
+}
+
+console.log(missing2([-3, -2, 1, 5])); // [-1, 0, 2, 3, 4]
+console.log(missing2([1, 2, 3, 4])); // []
+console.log(missing2([1, 5])); // [2, 3, 4]
+console.log(missing2([6])); // []

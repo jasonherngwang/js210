@@ -9,6 +9,10 @@ console.log(count); // [ 0, 1, 2, 3 ]
 
 // pop
 const pop = (arr) => {
+  if (array.length === 0) {
+    return undefined;
+  }
+
   const poppedElem = arr[arr.length - 1];
   arr.length = arr.length - 1;
   return poppedElem;

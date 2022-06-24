@@ -1,8 +1,3 @@
-/*
-Algo
-- 
-*/
-
 function arraysEqual(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   for (let index = 0; index < arr1.length; index += 1) {
@@ -14,12 +9,15 @@ function arraysEqual(arr1, arr2) {
 function areArraysEqual(array1, array2) {
   if (array1.length !== array2.length) return false;
 
+  // Working copy of array2
   let array2Copy = array2.slice();
   for (let i = 0; i < array1.length; i += 1) {
     let index = array2Copy.indexOf(array1[i]);
     if (index >= 0) {
+      // Delete element so it can't be counted again.
       array2Copy.splice(index, 1);
     } else {
+      // If at any point an element cannot be found, the arrays aren't equal.
       return false;
     }
   }
