@@ -1,6 +1,6 @@
 console.log((false && undefined)); // false (short-circuits at first operand)
 console.log((false || undefined)); // undefined (neither truthy)
-console.log(((false && undefined) || (false || undefined))); // undefined (undefined || undefined); undefined is falsey)
+console.log(((false && undefined) || (false || undefined))); // undefined (false || undefined); undefined is falsey)
 console.log(((false || undefined) || (false && undefined))); // false (undefined || false)
 console.log(((false && undefined) && (false || undefined))); // false (short-circuits at first operand)
 console.log(((false || undefined) && (false && undefined))); // undefined (short-circuits at first operand)
