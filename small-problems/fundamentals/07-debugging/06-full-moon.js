@@ -13,7 +13,7 @@ function transform(species) {
 for (let index = 0; index < species.length; index++) {
   const thisSpecies = species[index];
   // var newSpecies; // No enclosing function, so this is global scoped
-  let newSpecies; // No enclosing function, so this is global scoped
+  let newSpecies;
 
   if (isMidnight && isFullmoon && isTransformable(thisSpecies)) {
     newSpecies = transform(thisSpecies); // No else clause to reset newSpecies to '' or undefined. Or, use let instead of var.

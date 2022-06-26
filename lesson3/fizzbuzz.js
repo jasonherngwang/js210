@@ -14,7 +14,7 @@ const fizzbuzz = () => {
     result = '';
     if (currentNum % 3 === 0) result += 'Fizz';
     if (currentNum % 5 === 0) result += 'Buzz';
-    console.log(!result ? currentNum : result);
+    console.log(result || currentNum);
   }
 };
 fizzbuzz();
