@@ -1,6 +1,6 @@
 // ARRAY FUNCTIONS
 
-// Array equality (1st level only, primitives only)
+// Compare array equality (1st level only, primitives only)
 function arraysEqual(array1, array2) {
   if (array1.length !== array2.length) return false;
 
@@ -36,6 +36,7 @@ function tally2(array) {
   return counts;
 }
 
+// Tally, using the logical OR operator
 function tally3(array) {
   let counts = {};
   for (let elem of array) {
@@ -46,8 +47,23 @@ function tally3(array) {
 
 // console.log(tally([1, 1, 2, undefined, null, '', '', 0]))
 
+// Matrix Transpose
+function transpose(matrixArray) {
+  return matrixArray[0].map((_, colIndex) =>
+    matrixArray.map((row) => row[colIndex])
+  );
+}
+
+console.log(
+  transpose([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ])
+);
+
 // Sorting numbers
-console.log([1, 5, 3].sort((a, b) => a - b));
+// console.log([1, 5, 3].sort((a, b) => a - b));
 
 // STRINGS
 
@@ -97,7 +113,7 @@ function normalize(input, min, max) {
 // console.log(normalize(7, 0, 360));
 
 // Max or min of array
-console.log(Math.max([1, 2, 3]));
+// console.log(Math.max(...[1, 2, 3]));
 
 // RANGES
 
@@ -112,9 +128,9 @@ Array(15 - 10)
   .fill(10)
   .map((x, y) => x + y); // [ 10, 11, 12, 13, 14 ]
 // Letters
-range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
-  String.fromCharCode(x)
-);
+// range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+//   String.fromCharCode(x)
+// );
 
 // Array A-Z or a-z
 ASCII_UPPERCASE_A = 65;
